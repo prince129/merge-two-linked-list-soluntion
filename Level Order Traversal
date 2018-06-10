@@ -1,0 +1,11 @@
+void levelOrder(Node root) {
+     if(root == null) return;
+         Queue<Node> temp = new LinkedList<Node>();
+         temp.add(root);
+         while(!temp.isEmpty()){
+             Node x = temp.remove();
+             System.out.print(x.data+" ");
+             if(x.left!=null) temp.add(x.left);
+             if(x.right!=null) temp.add(x.right);
+         }
+    }
